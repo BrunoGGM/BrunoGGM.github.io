@@ -1,0 +1,22 @@
+html, body{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+    background-color: #e71d35;
+}
+
+nav .nav-wrapper {
+    position: relative;
+    height: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.img-logo-banner{
+    border-style: none;
+    height: 54px;
+    padding-top: 6px;
+}
