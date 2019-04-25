@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:title" content="Pensamiento Politécnico" />
+    <meta property="og:description" content="Tenemos el mejor estilo para ti, diseños unicos y exclusivos, encontrarás ropa de alta calidad para el politécnico   -ポリテクニックな思考">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pensamientopolitecnico.me/" />
+    <meta property="og:image" content="https://pensamientopolitecnico.me/img/fbpreviewog.jpg" />
+
+    <title>Pensamiento Politécnico</title>
+    <link rel="icon" type="image/png" href="../icon.png" />
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/materialize.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+    window.fbAsyncInit = function() {
+        FB.init({
+        xfbml            : true,
+        version          : 'v3.2'
+        });
+    };
+
+    (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat"
+    attribution=setup_tool
+    page_id="835421659853701"
+    theme_color="#e71d36"
+    logged_in_greeting="¡Hola! ¿Podemos ayudarte? Responderemos lo más rápido posible"
+    logged_out_greeting="¡Hola! ¿Podemos ayudarte? Responderemos lo más rápido posible">
+    </div>    
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.2&appId=292777311518789&autoLogAppEvents=1"></script>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="../index.html" class="brand-logo"><img src="../img/LogoPensamiento.png" class="img-logo-banner" alt=""></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Nosotros</a></li>
+                    <li><a href="">Catálogo</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="">Inicio</a></li>
+            <li><a href="">Nosotros</a></li>
+            <li><a href="">Catálogo<</a></li>
+            <li><a href="">Contacto</a></li>
+        </ul>
+       
+
+    
+        <main class="row">
+
+            <div class="col s12 m5 carousel carousel-slider">
+                <a class="carousel-item" href="#one!"><img src="img/ppplayeraguinda.png"></a>
+                <a class="carousel-item" href="#two!"><img src="img/ppplayerablanco.png"></a>
+            </div>
+
+            <div class="col s12 m7">
+                 <div>
+                    <h5>Playera Pensamiento Politécnico</h5>
+                    <br>
+                    <li class="material-icons">star</li>
+                    <li class="material-icons">star</li>
+                    <li class="material-icons">star</li>
+                    <li class="material-icons">star</li>
+                    <li class="material-icons">star</li>
+                    <br>
+                    <ul>
+                        <li>-Calidad premium 🔥</li>
+                        <li>-Diseño original 💯</li>
+                        <li>-Interacción con realidad aumentada 🤓</li>
+                        <li>-100% algodón peinado 👕</li>
+                    </ul>
+
+                    <br>
+                 </div>
+
+                 <div class="input-field col s12 m3">
+                        <select id="talla" >
+                          <option value="" disabled selected>Seleccionar talla</option>
+                          <option value="1">CH</option>
+                          <option value="2">M</option>
+                          <option value="3">G</option>
+                        </select>
+                        <label>Seleccionar talla</label>
+                </div>
+
+                <div class="input-field col s12 m3">
+                        <select id="color">
+                          <option value=""  disabled selected>Seleccionar color</option>
+                          <option value="1">Blanca</option>
+                          <option value="2">Guinda</option>
+                        </select>
+                        <label>Seleccionar color</label>
+                </div>
+
+                <div class="col s12 comprar">
+                        <a href="" id="btn-compra" target="_blank" class="btn-large waves-effect red darken-4 col s12 m6 disabled">Comprar</a>
+                </div>   
+
+            </div>  
+
+            <audio id="myAudio" src="macintosh-plus-420-reupload.mp3" autoplay></audio>
+           
+
+        </main>
+
+
+    <script src="../js/jquery-3.4.0.min.js"></script>
+    <script src="../js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        let talla, color, comprar, colorAnterior;
+
+        $('.sidenav').sidenav();
+        $('.carousel.carousel-slider').carousel({
+            fullWidth: true
+        });
+        $('select').formSelect();
+
+        var audio = document.getElementById("myAudio");
+        audio.volume = 0.1;
+        $('#talla').change(function(){
+            talla = $('#talla').val();
+            comprar = talla + color;
+            urlComprar(comprar);
+        });
+
+        
+        $('#color').change(function(){
+            color = $('#color').val();
+            // 1 = blanca 2 = guinda
+            if (color == '1') {
+                $('.carousel').carousel('next', 1);
+                colorAnterior = '1';
+            }
+
+            if (color == '2' && colorAnterior == '1') {
+                $('.carousel').carousel('next', 1);
+
+            }
+
+
+            comprar = talla + color;
+            $("#btn-compra").removeClass("disabled");
+            urlComprar(comprar);            
+        });   
+    
+
+        function urlComprar(comprar) {
+
+            switch (comprar) {
+
+                case '11':
+                    $("#btn-compra").attr("href", 'https://www.mercadopago.com/mlm/checkout/start?pref_id=426825494-51aff921-8ccb-4d07-8c90-605b70e355c7'); 
+                break;
+
+                case '12':
+                    $("#btn-compra").attr("href", 'https://www.mercadopago.com/mlm/checkout/start?pref_id=426825494-34d9fa6e-a00b-46ec-8cce-8d64ddf2a35b'); 
+                break;
+
+                case '21':
+                    $("#btn-compra").attr("href", 'https://www.mercadopago.com/mlm/checkout/start?pref_id=426825494-c315dfa5-2e80-418f-8c88-1aec95ebc702');  
+                break;
+
+                case '22':
+                    $("#btn-compra").attr("href", 'https://www.mercadopago.com/mlm/checkout/start?pref_id=426825494-1d0e190b-ed24-41e7-b355-0c008d9ba63a'); 
+                break;  
+                
+                case '31':
+                    $("#btn-compra").attr("href", 'https://www.mercadopago.com/mlm/checkout/start?pref_id=426825494-cc44a254-173d-4bd4-8dd2-88ec3f8d04a4'); 
+                
+                break;
+
+                case '32':
+                    $("#btn-compra").attr("href", 'https://www.mercadopago.com/mlm/checkout/start?pref_id=426825494-639c2a3c-c860-4df0-8203-cbca6ee69cfd');  
+                break;
+
+                default:
+                    break;
+            }
+        }
+    
+
+      
+      });
+    </script>
+</body>
+</html>
